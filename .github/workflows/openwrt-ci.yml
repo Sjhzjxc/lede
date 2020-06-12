@@ -7,14 +7,17 @@
 # <https://github.com/KFERMercer/OpenWrt-CI>
 # 
 
-name: OpenWrt-CI
+name: 自定义Lede
 
 on:
   schedule:
     - cron: 0 20 * * *
+#   push:
+#     tags:
+#       - '*'
   push:
-    tags:
-      - '*'
+    branches: 
+      - master
 
 jobs:
 
