@@ -7,11 +7,11 @@
 # <https://github.com/KFERMercer/OpenWrt-CI>
 # 
 
-name: 自定义Lede
+name: 自定义Lede-base-mount-ipv6
 
 on:
-  schedule:
-    - cron: 0 20 * * *
+  # schedule:
+  #   - cron: 0 20 * * *
 #   push:
 #     tags:
 #       - '*'
@@ -55,7 +55,9 @@ jobs:
           ./scripts/feeds install -a
 
       - name: Generate configuration file
-        run: make defconfig
+        run: |
+          mv base_mount_ipv6.config .config
+          make defconfig
 
       - name: Make download
         run: |
