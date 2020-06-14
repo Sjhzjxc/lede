@@ -7,7 +7,7 @@
 # <https://github.com/KFERMercer/OpenWrt-CI>
 # 
 
-name: 自定义Lede-base-up-lib
+name: 自定义Lede-base-up-luci
 
 on:
   # schedule:
@@ -18,7 +18,7 @@ on:
   push:
     branches: 
       - master
-    path: base_up_lib.config
+    path: base_luci.config
   watch:
     types: started
 
@@ -57,7 +57,7 @@ jobs:
 
       - name: Generate configuration file
         run: |
-          mv base_up_lib.config .config
+          mv base_luci.config .config
           make defconfig
 
       - name: Make download
