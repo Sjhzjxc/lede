@@ -18,6 +18,7 @@ on:
   push:
     branches: 
       - master
+    path: base_gzip.config
   watch:
     types: started
 

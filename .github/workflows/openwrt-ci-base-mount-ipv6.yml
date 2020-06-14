@@ -18,6 +18,7 @@ on:
   push:
     branches: 
       - master
+    path: base_mount_ipv6.config
   watch:
     types: started
 

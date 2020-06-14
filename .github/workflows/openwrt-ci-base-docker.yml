@@ -18,6 +18,7 @@ on:
   push:
     branches: 
       - master
+    path: base_docker.config
   watch:
     types: started
 
